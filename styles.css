@@ -16,21 +16,24 @@ body {
 
 .container {
 	margin: 1rem 0;
-    width: 100%;
-	
+	width: 99%;
 }
 
 .box {
 	border: 1px solid #000000;
 	background-color: #b1b1b1;
-    text-align: center;
-    padding: 0.5rem;
+	text-align: center;
+	padding: 0.5rem;
 }
 
 .grid-container {
 	display: grid;
 } /* Define o layout da grid (como se fosse uma tabela) */
 
-.ex-01{
-    grid-template-columns: 3rem 8rem 5rem 4rem;
+.ex-01 {
+	grid-template-columns: 3rem 8rem 5rem 4rem;
+} /*Define o tamanho das colunas da grid*/
+
+.ex-02 {
+	grid-template-columns: 10% 30% 40% 20%;
 } /*Define o tamanho das colunas da grid*/
