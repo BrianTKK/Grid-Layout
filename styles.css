@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+	margin: 0; /* Remove margens padrão */
+}
+
+.container {
+	margin: 1rem 0;
+    width: 100%;
+	
+}
+
+.box {
+	border: 1px solid #000000;
+	background-color: #b1b1b1;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.grid-container {
+	display: grid;
+} /* Define o layout da grid (como se fosse uma tabela) */
+
+.ex-01{
+    grid-template-columns: 3rem 8rem 5rem 4rem;
+} /*Define o tamanho das colunas da grid*/
