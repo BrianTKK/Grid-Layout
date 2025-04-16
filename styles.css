@@ -8,10 +8,12 @@
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
 	margin: 0; /* Remove margens padrão */
+}
+
+h2 {
+	text-align: center;
 }
 
 .container {
@@ -57,3 +59,37 @@ body {
 .ex-07 {
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 } /*Define automaticamente o numero de colunas que cabem no espaço disponivel respeitando o tamanho minimo e maximo*/
+
+.ex-08 {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+} /*Semelhante ao ex-07 mas ele não se esforça para alcançar o tamanho maximo definido*/
+
+.ex-09 {
+	grid-template-rows: 3rem 8rem 5rem 4rem;
+} /* Grid para linhas */
+
+.container1 {
+	height: 95vh;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 200px);
+	grid-template-rows: repeat(3, 100px);
+
+	column-gap: 30px;
+	row-gap: 50px;
+	/* O gap tambem pode ser definido somente com gap: 30px 50px;*/
+
+	/* Alinhamento horizontal - eixo X */
+	justify-content: end; /*Vale também testar start, center, space-between, space-around e space-evenly*/
+	
+	/* Alinhamento vertical - eixo y */
+	align-content: center;
+
+	/* Alinhamento do conteudo da grid */
+	justify-items: start; /*Vale também testar end, center, stretch e baseline*/
+	align-items: center; /*Vale também testar start, end, center, stretch e baseline*/
+
+	
+}
+
+/* Com justify-self e align-self podemos alinhar os elementos individualmente em uma classe separada por exemplo */
