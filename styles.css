@@ -53,3 +53,7 @@ body {
 .ex-06 {
 	grid-template-columns: repeat(4, minmax(100px, 200px));
 } /*Define o tamanho minimo das colunas em 100px e maximo de 200px*/
+
+.ex-07 {
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} /*Define automaticamente o numero de colunas que cabem no espaço disponivel respeitando o tamanho minimo e maximo*/
