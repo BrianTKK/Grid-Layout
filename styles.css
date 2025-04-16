@@ -43,5 +43,13 @@ body {
 } /*Define o tamanho das colunas da grid em frações, usando como base o menor elemento*/
 
 .ex-04 {
-    grid-template-columns: repeat(3, 1fr) 100px;
+	grid-template-columns: repeat(3, 1fr) 100px;
 } /*Define o tamanho das colunas da grid em frações, deixando os três primeiroes elementos com uma fração (tamanhos iguais) e o ultimo com 100px*/
+
+.ex-05 {
+	grid-template-columns: minmax(100px, 1fr) 2fr 3fr 1fr;
+} /*Define o tamanho da primeira coluna com minimo de 100px e maximo de 1fr*/
+
+.ex-06 {
+	grid-template-columns: repeat(4, minmax(100px, 200px));
+} /*Define o tamanho minimo das colunas em 100px e maximo de 200px*/
