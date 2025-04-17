@@ -1,8 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
-	text-decoration: none;
+	text-decoration: none;	
 	font-family: 'Poppins', sans-serif;
+	color: inherit;
+	box-sizing: border-box;
 }
 
 body {
@@ -10,6 +12,29 @@ body {
 	flex-direction: column;
 	min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
 	margin: 0; /* Remove margens padrão */
+}
+
+.header1 {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 100px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.btn {
+	background-color: #1600dd;
+	color: #ccc;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	border: solid 1px #000000;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #ccc;
+	color: #1600dd;
+	transform: scale(1.05);
 }
 
 h2 {
@@ -81,15 +106,53 @@ h2 {
 
 	/* Alinhamento horizontal - eixo X */
 	justify-content: end; /*Vale também testar start, center, space-between, space-around e space-evenly*/
-	
+
 	/* Alinhamento vertical - eixo y */
 	align-content: center;
 
 	/* Alinhamento do conteudo da grid */
-	justify-items: start; /*Vale também testar end, center, stretch e baseline*/
-	align-items: center; /*Vale também testar start, end, center, stretch e baseline*/
+	justify-items: start; /*Vale também testar end, center, stretch*/
+	align-items: center; /*Vale também testar start, end, center, stretch*/
+}
+/* Com justify-self e align-self podemos alinhar os elementos individualmente em uma classe separada por exemplo */
 
+.body {
+	padding: 0.5rem;
+	color: #fff;
+	font-size: 3rem;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 20vh 70vh 10vh;
+	gap: 0.2rem;
+}
+
+.header {
+	background-color: #333;
+	/* grid-column-start: 1;
+	grid-column-end: 3; */
+	grid-column: 1/3;
+	padding-left: 0.5rem;
 	
 }
 
-/* Com justify-self e align-self podemos alinhar os elementos individualmente em uma classe separada por exemplo */
+.main {
+	background-color: #555;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	padding-left: 0.5rem;
+
+}
+
+.aside{
+	background-color: #777;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	padding-left: 0.5rem;
+}
+
+.footer {
+	background-color: #333;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	padding-left: 0.5rem;
+}
